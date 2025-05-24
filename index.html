@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planet Fitness Workout Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; padding: 20px; }
+    h2 { background: #5a67d8; color: white; padding: 10px; border-radius: 5px; }
+    .day { display: none; margin-top: 20px; }
+    .day.active { display: block; }
+    button { margin: 5px; padding: 10px 15px; border: none; border-radius: 5px; background: #4a5568; color: white; }
+    label { display: block; margin: 5px 0; }
+    .section { margin-top: 15px; padding: 10px; background: white; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Planet Fitness Workout Tracker</h1>
+  <div>
+    <button onclick="showDay('monday')">Monday</button>
+    <button onclick="showDay('wednesday')">Wednesday</button>
+    <button onclick="showDay('friday')">Friday</button>
+  </div>
+
+  <div id="monday" class="day active">
+    <h2>Monday - Upper Body Push</h2>
+    <div class="section">
+      <h3>Warm-Up</h3>
+      <label><input type="checkbox"> Treadmill brisk walk or jog (5 min)</label>
+      <label><input type="checkbox"> Arm circles</label>
+      <label><input type="checkbox"> Leg swings</label>
+      <label><input type="checkbox"> High knees</label>
+      <label><input type="checkbox"> Bodyweight squats</label>
+    </div>
+    <div class="section">
+      <h3>Chest</h3>
+      <label><input type="checkbox"> Machine Chest Press</label>
+      <label><input type="checkbox"> Pec Deck</label>
+      <label><input type="checkbox"> Push-Ups</label>
+      <label><input type="checkbox"> Cable Chest Flys</label>
+    </div>
+    <div class="section">
+      <h3>Shoulders</h3>
+      <label><input type="checkbox"> Dumbbell Shoulder Press</label>
+      <label><input type="checkbox"> Lateral Raises</label>
+      <label><input type="checkbox"> Rear Delt Fly</label>
+      <label><input type="checkbox"> Shoulder Press Machine</label>
+    </div>
+    <div class="section">
+      <h3>Triceps</h3>
+      <label><input type="checkbox"> Tricep Pushdowns</label>
+      <label><input type="checkbox"> Overhead Dumbbell Tricep Extension</label>
+      <label><input type="checkbox"> Dips</label>
+      <label><input type="checkbox"> Triceps Dip Machine</label>
+    </div>
+    <div class="section">
+      <h3>Finisher</h3>
+      <label><input type="checkbox"> Battle Ropes</label>
+      <label><input type="checkbox"> Push-Up Burnout</label>
+    </div>
+  </div>
+
+  <div id="wednesday" class="day">
+    <h2>Wednesday - Lower Body + Core</h2>
+    <div class="section">
+      <h3>Legs</h3>
+      <label><input type="checkbox"> Leg Press</label>
+      <label><input type="checkbox"> Goblet Squats</label>
+      <label><input type="checkbox"> Dumbbell Lunges</label>
+      <label><input type="checkbox"> Step-ups</label>
+      <label><input type="checkbox"> Smith Machine Squats</label>
+    </div>
+    <div class="section">
+      <h3>Hamstrings & Glutes</h3>
+      <label><input type="checkbox"> Seated Leg Curl Machine</label>
+      <label><input type="checkbox"> Glute Kickbacks</label>
+      <label><input type="checkbox"> Romanian Deadlifts</label>
+      <label><input type="checkbox"> Hip Abduction/Adduction</label>
+    </div>
+    <div class="section">
+      <h3>Calves</h3>
+      <label><input type="checkbox"> Standing Calf Raises</label>
+      <label><input type="checkbox"> Seated Calf Machine</label>
+    </div>
+    <div class="section">
+      <h3>Core</h3>
+      <label><input type="checkbox"> Plank (30 sec)</label>
+      <label><input type="checkbox"> Leg Raises</label>
+      <label><input type="checkbox"> Russian Twists</label>
+      <label><input type="checkbox"> Mountain Climbers</label>
+      <label><input type="checkbox"> Captain’s Chair Leg Raises</label>
+    </div>
+  </div>
+
+  <div id="friday" class="day">
+    <h2>Friday - Upper Body Pull + Cardio</h2>
+    <div class="section">
+      <h3>Back</h3>
+      <label><input type="checkbox"> Lat Pulldown</label>
+      <label><input type="checkbox"> Seated Row Machine</label>
+      <label><input type="checkbox"> Dumbbell Rows</label>
+      <label><input type="checkbox"> Assisted Pull-Ups</label>
+      <label><input type="checkbox"> Cable Face Pulls</label>
+    </div>
+    <div class="section">
+      <h3>Biceps</h3>
+      <label><input type="checkbox"> Dumbbell Curls</label>
+      <label><input type="checkbox"> Preacher Curl Machine</label>
+      <label><input type="checkbox"> Cable Bicep Curls</label>
+      <label><input type="checkbox"> EZ Bar Curls</label>
+    </div>
+    <div class="section">
+      <h3>Cardio</h3>
+      <label><input type="checkbox"> Incline Treadmill Walk</label>
+      <label><input type="checkbox"> HIIT Elliptical or Stair Stepper</label>
+      <label><input type="checkbox"> Rowing Machine</label>
+    </div>
+  </div>
+
+  <script>
+    function showDay(day) {
+      document.querySelectorAll('.day').forEach(d => d.classList.remove('active'));
+      document.getElementById(day).classList.add('active');
+    }
+  </script>
+</body>
+</html>
